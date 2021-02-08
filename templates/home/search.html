@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block title2 %}<title>About - My School </title>{% endblock title2 %}
+
+{% block body %}
+
+{% if long_query %}
+<div class="container my-3">
+    <h1>Search Results :-</h1>
+    Your search : <b>{{query|truncatechars:100}}</b> - did not match any documents.
+    <hr>
+    <h4>Suggestions:</h4>
+    <ul>
+    <li>Make sure that all words are spelled correctly.</li>
+    <li>Try different keywords.</li>
+    <li>Try more general keywords.</li>
+    </ul>
+</div>
+{% else %}
+
+<!-- 11th standard -->
+{% if user.is_authenticated and user.last_name == "11"  %}
+
+<div class="container my-3">
+    <!-- physic -->
+    <div class="my-5">
+        <h2>Search Result for Physic:-</h2>
+        <ul class="list-group list-group-flush">
+
+            {% if phy_res  %}
+            {% for tut in phy_res %}
+            <a href="/tut11/physic-{{tut.slug}}"><li class="list-group-item text-center"><h3>{{tut.title}}</h3></li></a>
+            {% endfor %}
+            {% else %}
+            <h3>No result Found!</h3>
+            {% endif %}
+
+        </ul>
+    </div>
+
+    <!-- chemistry -->
+    <div class="my-5">
+        <h2>Search Result for Chemistry:-</h2>
+        <ul class="list-group list-group-flush">
+
+            {% if chem_res  %}
+            {% for tut in chem_res %}
+            <a href="/tut11/chemistry-{{tut.slug}}"><li class="list-group-item text-center"><h3>{{tut.title}}</h3></li></a>
+            {% endfor %}
+            {% else %}
+            <h3>No result Found!</h3>
+            {% endif %}
+
+        </ul>
+    </div>
+
+    <!-- math -->
+    <div class="my-5">
+        <h2>Search Result for Math:-</h2>
+        <ul class="list-group list-group-flush">
+
+            {% if math_res  %}
+            {% for tut in math_res %}
+            <a href="/tut11/math-{{tut.slug}}"><li class="list-group-item text-center"><h3>{{tut.title}}</h3></li></a>
+            {% endfor %}
+            {% else %}
+            <h3>No result Found!</h3>
+            {% endif %}
+
+        </ul>
+    </div>
+</div>
+
+{% else %}
+other class
+{% endif %}
+
+{% endif %}
+{% endblock body %}

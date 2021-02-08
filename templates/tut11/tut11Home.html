@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+ {% block title %}Tutorials of 11th Standard - My School {% endblock title %}
+
+{% block css %}
+
+<style>
+    .class-icon{
+        display: flex;
+        justify-content: center;
+    }    
+</style>
+
+{% endblock css %}
+
+{% block body %}
+
+<div class="container-fluid">
+    <div class="container my-2 class-icon">
+    <img src="/static/tut11/class-iocn.png" class="mx-1 my-2" alt="" width="40px" height="40px">
+    <h1>11th Standard Tutorials</h1></div>
+
+    <div class="row">
+
+        <!-- physic series -->
+        <div class="col-md-4 text-center my-4">
+            <img src="/static/tut11/physic.jpg" alt="physic-img" class="rounded-circle w-50"  height="200px">
+            <h1 class="">Physics</h1>
+            <p>Here we talk about physic tutorials</p>
+            <a href="/tut11/physic-lecture-1"><button class="btn btn-warning">Laern More</button></a>
+        </div>
+
+        <!-- chemistry series -->
+        <div class="col-md-4 text-center my-4">
+            <img src="/static/tut11/chemistry.jpg" alt="physic-img" class="rounded-circle w-50"  height="200px">
+            <h1 class="">Chemistry</h1>
+            <p>Here we talk about chemistry tutorials</p>
+            <a href="/tut11/chemistry-lecture-1"><button class="btn btn-warning">Laern More</button></a>
+        </div>
+
+        <!-- mathmatics series -->
+        <div class="col-md-4 text-center my-4">
+            <img src="/static/tut11/math.jpg" alt="physic-img" class="rounded-circle w-50"  height="200px">
+            <h1 class="">Math</h1>
+            <p>Here we talk about Math tutorials</p>
+            <a href="/tut11/math-lecture-1"><button class="btn btn-warning">Laern More</button></a>
+        </div>
+        
+    </div>
+</div>
+
+{% endblock body %}

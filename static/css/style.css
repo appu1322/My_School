@@ -1,0 +1,55 @@
+
+/* slidebar css */
+#sidebar{
+    border: 1px solid black;
+    border-radius: 5px;
+    overflow-y: scroll;
+    max-height: 550px;
+    padding-left: 0px;
+    padding-right: 0px;
+    background: #abbaab; 
+    background: -webkit-linear-gradient(to right, #ffffff, #abbaab);  
+    background: linear-gradient(to right, #ffffff, #abbaab); 
+  }
+
+  #sidebar h3{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
+  #unstyle-list li{
+    background: #556270;  
+    background: -webkit-linear-gradient(to right, #FF6B6B, #556270);  
+    background: linear-gradient(to right, #FF6B6B, #556270);
+  }
+
+  #unstyle-list a{
+    color: #fff;
+  }
+   
+  #unstyle-list a:hover{
+    text-decoration: none;
+    -webkit-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+  -ms-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+  -o-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+  }
+
+  #unstyle-list li:active{
+    border: 2px solid #556270; 
+  }
+
+  #not-found-middle{    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+  #not-found-head{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 25px;
+  }

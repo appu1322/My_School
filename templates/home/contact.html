@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact Us | To resolve your problem - My School {% endblock title %}
+{% block contact-active %} active {% endblock contact-active %}
+
+{% block css %}
+
+<style>
+    #contact-address{
+        display: flex;
+        color: #fff;
+    }
+
+    #contact-address-icon{
+        filter: invert(1);
+    }
+
+    #adress-detail{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+</style>
+
+{% endblock css %}
+
+{% block body %}
+
+<h1 class="text-center mt-2">Do you have any query?</h1>
+
+<div class="container my-5">
+    <div class="row">
+
+        <!-- Contact us -->
+        <div class="col-md-7 offset-md-1">
+            <div class="container bg-primary py-2" id="contact-address">
+                <img src="/static/home/images/contact.png" class="mt-1 mx-2" id="contact-address-icon" alt="" width="25px" height="30">
+                <h3>Contact US</h3>
+            </div>
+            <div class="border px-3 py-2">
+                
+                <form action="/contact/" method="post"> {% csrf_token %}
+                    <div class="form-group">
+                        <label for="fname">First Name</label>
+                        <input type="text" class="form-control" id="fname" name="fname" placeholder="Enter Your fist name" required>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="lname">Last Name</label>
+                        <input type="text" class="form-control" id="lname" name="lname" placeholder="Enter your last name" required>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email address" required>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="class">Class</label>
+                        <input type="text" class="form-control" id="class" name="class" placeholder="Enter your class" required>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="section">Section</label>
+                        <input type="text" class="form-control" id="section" name="section" placeholder="Enter your class section" required>
+                    </div>
+            
+                    <div class="form-group">
+                      <label for="msg">Tell me why you want to contact me ?</label>
+                      <textarea class="form-control" id="msg" rows="5" name="msg" required placeholder="Whats your query?"></textarea>
+                    </div>
+            
+                    <button type="submit" class="btn btn-success btn-lg mb-3">Submit</button>
+            
+                </form>
+            </div>        
+        </div>
+
+        <!-- Address Detail -->
+        <div class="col-md-4">
+            <div class="container bg-success py-2" id="contact-address">
+                <img src="/static/home/images/address.png" class="mt-1 mx-2" id="contact-address-icon" alt="" width="27px" height="30">
+                <h3>Address</h3>
+            </div>
+            <div class="border px-3 py-2">
+
+                <ul class="list-unstyled mb-0">
+                    <li>
+                        <div class="container my-3" id="adress-detail">
+                        <img src="/static/home/images/map.png" class="mt-1 mx-2 center" alt="" width="27px" height="40">
+                        <p>Adress will we, Here</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="container my-3" id="adress-detail">
+                        <img src="/static/home/images/call.png" class="mt-1 mx-2 center" alt="" width="27px" height="30">
+                        <p>+761-321-542</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="container my-3" id="adress-detail">
+                        <img src="/static/home/images/contact.png" class="mt-1 mx-2 center" alt="" width="27px" height="30">
+                        <p>Example@gmailcom</p>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>    
+        </div>
+
+    </div>    
+</div>
+
+<!-- footer -->
+<div class="container-fluid p-0 " style="background-color: rgb(255, 233, 228);">
+    <p class="mb-0 py-2 text-center coll" >we reserved &#x00A9; copyright 2020 wwww.myschool.com</p> 
+</div>
+
+{% endblock %}
